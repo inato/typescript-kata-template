@@ -13,10 +13,10 @@ export class Rover {
   left() {
       switch (this.direction) {
           case Direction.WEST:
-              this.direction = Direction.SOUTH
+              this.direction = Direction.SOUTH;
               break;
         case Direction.SOUTH:
-            this.direction = Direction.EAST
+            this.direction = Direction.EAST;
             break;
         
           default:
