@@ -1,11 +1,12 @@
 import { Direction } from "./Direction";
 
 export class Rover {
-  private x: number;
-  private y: number;
+  readonly x: number = 0;
+  readonly y: number = 0;
+
 
   forward() {
-    throw new Error("Method not implemented.");
+    return this;
   }
   direction(): Direction {
     return Direction.NORTH;
