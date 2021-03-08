@@ -56,10 +56,17 @@ describe('Rover', () => {
      
        rover.left();
      
-       expect(rover.x).toBe(0);
-       expect(rover.y).toBe(0);
        expect(rover.direction).toBe(Direction.WEST);
      });
+
+     it('should not change the position', () => {
+      const rover = new Rover();
+    
+      rover.left();
+    
+      expect(rover.x).toBe(0);
+      expect(rover.y).toBe(0);
+    });
    });
      
 });
