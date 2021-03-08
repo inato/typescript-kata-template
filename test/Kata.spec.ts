@@ -87,6 +87,17 @@ describe('Rover', () => {
     
       expect(rover.direction).toBe(Direction.EAST);
     });
+
+    it('should face NORTH after turning 4 times', () => {
+      const rover = new Rover();
+    
+      rover.left();
+      rover.left();
+      rover.left();
+      rover.left();
+    
+      expect(rover.direction).toBe(Direction.NORTH);
+    });
    });
      
 });
