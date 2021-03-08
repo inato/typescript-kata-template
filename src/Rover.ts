@@ -7,6 +7,10 @@ export class Rover {
   direction = Direction.NORTH;
 
   forward() {
+    if (this.direction === Direction.WEST) {
+      this.x -= 1;
+      return;
+    }
     this.y += 1;
   }
 

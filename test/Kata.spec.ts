@@ -50,7 +50,11 @@ describe('Rover', () => {
     });
 
     it('should move left when facing west', () => {
+      rover.left();
+      rover.forward();
 
+      expect(rover.x).toBe(-1);
+      expect(rover.y).toBe(0);
     })
   });
 
