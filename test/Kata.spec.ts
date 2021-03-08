@@ -56,6 +56,15 @@ describe('Rover', () => {
       expect(rover.x).toBe(-1);
       expect(rover.y).toBe(0);
     })
+
+    it('should move down when facing south', () => {
+      rover.left();
+      rover.left();
+      rover.forward();
+
+      expect(rover.x).toBe(0);
+      expect(rover.y).toBe(-1);
+    })
   });
 
   describe('left', () => {

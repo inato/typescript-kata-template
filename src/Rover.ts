@@ -11,6 +11,10 @@ export class Rover {
       this.x -= 1;
       return;
     }
+    if (this.direction === Direction.SOUTH) {
+      this.y -= 1;
+      return;
+    }
     this.y += 1;
   }
 
