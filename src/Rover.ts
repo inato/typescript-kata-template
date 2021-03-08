@@ -18,6 +18,7 @@ export class Rover {
         this.y += 1;
         break;
       case Direction.EAST:
+        this.x += 1;
         break;
     }
   }
