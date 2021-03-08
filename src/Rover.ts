@@ -10,8 +10,6 @@ export interface Position {
 }
 
 export class Rover {
-  private x: number = 0;
-  private y: number = 0;
   private _position = position(0, 0);
 
   direction = Direction.NORTH;
@@ -23,19 +21,15 @@ export class Rover {
   forward() {
     switch (this.direction) {
       case Direction.WEST:
-        this.x -= 1;
         this._position = position(this._position.x - 1, this._position.y);
         break;
       case Direction.SOUTH:
-        this.y -= 1;
         this._position = position(this._position.x, this._position.y - 1);
         break;
       case Direction.NORTH:
-        this.y += 1;
         this._position = position(this._position.x, this._position.y + 1);
         break;
       case Direction.EAST:
-        this.x += 1;
         this._position = position(this._position.x + 1, this._position.y);
         break;
     }
