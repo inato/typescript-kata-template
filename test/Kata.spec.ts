@@ -36,7 +36,7 @@ describe('Rover', () => {
 
 
   describe('moving forward', () => {
-    it('should move forward facing North', () => {
+    it('should move up when facing North', () => {
       rover.forward();
 
       expect(rover.x).toBe(0);
@@ -48,6 +48,10 @@ describe('Rover', () => {
 
       expect(rover.direction).toBe(Direction.NORTH);
     });
+
+    it('should move left when facing west', () => {
+
+    })
   });
 
   describe('left', () => {
@@ -88,4 +92,5 @@ describe('Rover', () => {
       expect(rover.direction).toBe(Direction.NORTH);
     });
   });
+
 });
