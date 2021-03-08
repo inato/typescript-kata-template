@@ -1,6 +1,10 @@
 import { Direction } from './Direction';
 import { north, position, Position } from './position';
 
+function west(pos: Position) {
+  return position(pos.x - 1, pos.y);
+}
+
 export class Rover {
   private _position = position(0, 0);
 
@@ -13,7 +17,7 @@ export class Rover {
   forward() {
     switch (this.direction) {
       case Direction.WEST:
-        this._position = this.west(this._position);
+        this._position = west(this._position);
         break;
       case Direction.SOUTH:
         this._position = position(this._position.x, this._position.y - 1);
@@ -25,10 +29,6 @@ export class Rover {
         this._position = position(this._position.x + 1, this._position.y);
         break;
     }
-  }
-
-  private west(pos: Position) {
-    return position(pos.x - 1, pos.y);
   }
 
   left() {
