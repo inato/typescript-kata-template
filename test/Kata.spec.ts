@@ -66,7 +66,7 @@ describe('Rover', () => {
       expect(rover.y).toBe(-1);
     })
 
-    it('should move left twice when moving forward twice', () => {
+    it('should move up twice when moving forward twice', () => {
       rover.forward();
       rover.forward();
 
