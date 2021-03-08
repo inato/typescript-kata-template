@@ -1,5 +1,8 @@
 import { Direction } from './Direction';
 
+export function position(x, y) {
+  return {x, y};
+}
 
 export interface Position {
   x: number;
