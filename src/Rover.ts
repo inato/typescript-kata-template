@@ -13,7 +13,7 @@ export class Rover {
   forward() {
     switch (this.direction) {
       case Direction.WEST:
-        this._position = position(this._position.x - 1, this._position.y);
+        this._position = this.west();
         break;
       case Direction.SOUTH:
         this._position = position(this._position.x, this._position.y - 1);
@@ -25,6 +25,10 @@ export class Rover {
         this._position = position(this._position.x + 1, this._position.y);
         break;
     }
+  }
+
+  private west(): { x: any; y: any; } {
+    return position(this._position.x - 1, this._position.y);
   }
 
   left() {
