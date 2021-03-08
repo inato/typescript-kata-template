@@ -24,7 +24,7 @@ export class Rover {
     switch (this.direction) {
       case Direction.WEST:
         this.x -= 1;
-        this._position.x -= 1;
+        this._position = position(this._position.x-1, this._position.y);
         break;
       case Direction.SOUTH:
         this.y -= 1;
