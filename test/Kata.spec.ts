@@ -1,5 +1,5 @@
 import { Direction } from '../src/Direction';
-import { Rover } from '../src/Rover';
+import { position, Rover } from '../src/Rover';
 
 describe('Rover', () => {
   let rover: Rover;
@@ -26,9 +26,7 @@ describe('Rover', () => {
   describe('init', () => {
 
     it('should start at origin', () => {
-      expect(rover.x).toBe(0);
-      expect(rover.y).toBe(0);
-      expect(rover.position()).toStrictEqual({x: 0, y: 0});
+      expect(rover.position()).toStrictEqual(position(0, 0));
     });
   
     it('should start facing North', () => {
@@ -41,8 +39,7 @@ describe('Rover', () => {
     it('should move up when facing North', () => {
       rover.forward();
 
-      expect(rover.x).toBe(0);
-      expect(rover.y).toBe(1);
+      expect(rover.position()).toStrictEqual(position(0, 1));
     });
 
     it('should not change direction when moving forward', () => {
@@ -55,8 +52,7 @@ describe('Rover', () => {
       rover.left();
       rover.forward();
 
-      expect(rover.x).toBe(-1);
-      expect(rover.y).toBe(0);
+      expect(rover.position()).toStrictEqual(position(-1, 0));
     })
 
     it('should move down when facing south', () => {
@@ -64,8 +60,7 @@ describe('Rover', () => {
       rover.left();
       rover.forward();
 
-      expect(rover.x).toBe(0);
-      expect(rover.y).toBe(-1);
+      expect(rover.position()).toStrictEqual(position(0, -1));
     })
 
     it('should move right when facing east', () => {
@@ -91,8 +86,7 @@ describe('Rover', () => {
     it('should not change the position', () => {
       rover.left();
 
-      expect(rover.x).toBe(0);
-      expect(rover.y).toBe(0);
+      expect(rover.position()).toStrictEqual({x: 0, y: 0});
     });
 
     it('should face WEST after turning once', () => {
