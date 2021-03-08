@@ -22,14 +22,18 @@ describe('Rover', () => {
   //   expect(rover.position()).toBe(new Position(2,2));
   // });
 
-  it('should start at origin', () => {
-    expect(rover.x).toBe(0);
-    expect(rover.y).toBe(0);
+  describe('init', () => {
+
+    it('should start at origin', () => {
+      expect(rover.x).toBe(0);
+      expect(rover.y).toBe(0);
+    });
+  
+    it('should start facing North', () => {
+      expect(rover.direction).toBe(Direction.NORTH);
+    });
   });
 
-  it('should start facing North', () => {
-    expect(rover.direction).toBe(Direction.NORTH);
-  });
 
   describe('moving forward', () => {
     it('should move forward facing North', () => {
