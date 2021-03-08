@@ -24,19 +24,19 @@ export class Rover {
     switch (this.direction) {
       case Direction.WEST:
         this.x -= 1;
-        this._position = position(this._position.x-1, this._position.y);
+        this._position = position(this._position.x - 1, this._position.y);
         break;
       case Direction.SOUTH:
         this.y -= 1;
-        this._position = position(this._position.x, this._position.y-1);
+        this._position = position(this._position.x, this._position.y - 1);
         break;
       case Direction.NORTH:
         this.y += 1;
-        this._position = position(this._position.x, this._position.y+1);;
+        this._position = position(this._position.x, this._position.y + 1);
         break;
       case Direction.EAST:
         this.x += 1;
-        this._position.x += 1;
+        this._position = position(this._position.x + 1, this._position.y);
         break;
     }
   }
