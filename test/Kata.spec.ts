@@ -1,3 +1,4 @@
+import { Direction } from "../src/Direction";
 import { Rover } from "../src/Rover";
 
 describe('Rover', () => {
