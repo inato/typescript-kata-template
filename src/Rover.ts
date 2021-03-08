@@ -5,6 +5,7 @@ export interface Position {
   x: number;
   y: number;
 }
+
 export class Rover {
   x: number = 0;
   y: number = 0;
@@ -12,7 +13,10 @@ export class Rover {
   direction = Direction.NORTH;
 
   position():Position {
-    // return [x,y];
+    return {
+      x: this.x,
+      y: this.y
+    }
   }
 
   forward() {

@@ -27,6 +27,7 @@ describe('Rover', () => {
     it('should start at origin', () => {
       expect(rover.x).toBe(0);
       expect(rover.y).toBe(0);
+      expect(rover.position()).toStrictEqual({x: 0, y: 0});
     });
   
     it('should start facing North', () => {
