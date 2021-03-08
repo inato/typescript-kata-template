@@ -7,6 +7,7 @@ describe('Rover', () => {
   beforeEach(() => {
     rover = new Rover();
   });
+
   // it('should accept a sequence of commands', () => {
   //   let rover = new Rover();
 
