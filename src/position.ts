@@ -1,5 +1,5 @@
 
-export function position(x, y) {
+export const position=(x, y) =>{
   return { x, y };
 }
 export interface Position {
@@ -7,6 +7,10 @@ export interface Position {
   y: number;
 }
 
-export const north = (pos) => {
+export const north = (pos: Position) => {
     return position(pos.x, pos.y +1)
+}
+
+export const west =(pos: Position) => {
+  return position(pos.x - 1, pos.y);
 }

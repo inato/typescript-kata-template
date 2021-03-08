@@ -1,9 +1,7 @@
 import { Direction } from './Direction';
-import { north, position, Position } from './position';
+import { north, west, position, Position } from './position';
 
-function west(pos: Position) {
-  return position(pos.x - 1, pos.y);
-}
+
 
 export class Rover {
   private _position = position(0, 0);
