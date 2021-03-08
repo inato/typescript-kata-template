@@ -7,15 +7,19 @@ export class Rover {
   direction = Direction.NORTH;
 
   forward() {
-    if (this.direction === Direction.WEST) {
-      this.x -= 1;
-      return;
+    switch (this.direction) {
+      case Direction.WEST:
+        this.x -= 1;
+        break;
+      case Direction.SOUTH:
+        this.y -= 1;
+        break;
+      case Direction.NORTH:
+        this.y += 1;
+        break;
+      case Direction.EAST:
+        break;
     }
-    if (this.direction === Direction.SOUTH) {
-      this.y -= 1;
-      return;
-    }
-    this.y += 1;
   }
 
   left() {
