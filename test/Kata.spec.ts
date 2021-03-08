@@ -1,5 +1,6 @@
 import { Direction } from '../src/Direction';
-import { position, Rover } from '../src/Rover';
+import { Rover } from '../src/Rover';
+import { position } from "../src/position";
 
 describe('Rover', () => {
   let rover: Rover;

@@ -1,13 +1,5 @@
 import { Direction } from './Direction';
-
-export function position(x, y) {
-  return { x, y };
-}
-export interface Position {
-  x: number;
-  y: number;
-}
-
+import { position, Position } from './position';
 
 export class Rover {
   private _position = position(0, 0);
