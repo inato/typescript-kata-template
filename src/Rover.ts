@@ -18,7 +18,10 @@ export class Rover {
         case Direction.SOUTH:
             this.direction = Direction.EAST;
             break;
-        
+        case Direction.NORTH:
+            this.direction = Direction.WEST;
+            break;
+                
           default:
             this.direction = Direction.WEST;
               break;
