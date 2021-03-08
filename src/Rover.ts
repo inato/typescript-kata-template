@@ -15,6 +15,10 @@ export class Rover {
       this.direction = Direction.SOUTH;
       return;  
     }
-    this.direction = Direction.WEST;
+    if (this.direction === Direction.SOUTH) {
+        this.direction = Direction.EAST;
+        return;  
+      }
+      this.direction = Direction.WEST;
   }
 }
