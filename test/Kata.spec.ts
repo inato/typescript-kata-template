@@ -51,13 +51,23 @@ describe('Rover', () => {
   });
 
   describe('left', () => {
-     it('should turn left', () => {
+     it('should face WEST after facing NORTH and turning once', () => {
        const rover = new Rover();
      
        rover.left();
      
        expect(rover.direction).toBe(Direction.WEST);
      });
+
+     it('should face SOUTH after facing NORTH and turning twice', () => {
+      const rover = new Rover();
+    
+      rover.left();
+      rover.left();
+    
+      expect(rover.direction).toBe(Direction.SOUTH);
+    });
+
 
      it('should not change the position', () => {
       const rover = new Rover();

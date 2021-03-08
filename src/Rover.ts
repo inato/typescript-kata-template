@@ -6,12 +6,15 @@ export class Rover {
 
    direction = Direction.NORTH;
 
-
   forward() {
     this.y += 1;
   }
 
   left(){
+    if (this.direction === Direction.WEST) {
+      this.direction = Direction.SOUTH;
+      return;  
+    }
     this.direction = Direction.WEST;
   }
 }
