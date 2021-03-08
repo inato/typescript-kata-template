@@ -69,16 +69,14 @@ describe('Rover', () => {
       rover.left();
       rover.forward();
 
-      expect(rover.x).toBe(1);
-      expect(rover.y).toBe(0);
+      expect(rover.position()).toStrictEqual(position(1, 0));
     })
 
     it('should move up twice when moving forward twice', () => {
       rover.forward();
       rover.forward();
 
-      expect(rover.x).toBe(0);
-      expect(rover.y).toBe(2);
+      expect(rover.position()).toStrictEqual(position(0, 2));
     } )
   });
 
