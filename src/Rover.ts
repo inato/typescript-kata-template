@@ -1,12 +1,12 @@
 import { Direction } from "./Direction";
 
 export class Rover {
-  readonly x: number = 0;
-  readonly y: number = 0;
+   x: number = 0;
+   y: number = 0;
 
 
   forward() {
-    return this;
+    this.y += 1;
   }
   direction(): Direction {
     return Direction.NORTH;

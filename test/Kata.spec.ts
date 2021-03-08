@@ -36,7 +36,7 @@ describe('Rover', () => {
     rover.forward();
 
     expect(rover.x).toBe(0);
-    expect(rover.y).toBe(0);
+    expect(rover.y).toBe(1);
     expect(rover.direction()).toBe(Direction.NORTH);
  });
 });
