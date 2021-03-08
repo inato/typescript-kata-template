@@ -10,8 +10,6 @@ describe('Rover', () => {
   });
 
   it('should accept a sequence of commands', () => {
-    let rover = new Rover();
-
     rover.forward();
     rover.right();
     rover.forward();
