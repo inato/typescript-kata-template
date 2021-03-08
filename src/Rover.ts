@@ -1,23 +1,23 @@
-import { Direction } from "./Direction";
+import { Direction } from './Direction';
 
 export class Rover {
-   x: number = 0;
-   y: number = 0;
+  x: number = 0;
+  y: number = 0;
 
-   direction = Direction.NORTH;
+  direction = Direction.NORTH;
 
   forward() {
     this.y += 1;
   }
 
-  left(){
+  left() {
     if (this.direction === Direction.WEST) {
       this.direction = Direction.SOUTH;
-      return;  
+      return;
     }
     if (this.direction === Direction.SOUTH) {
       this.direction = Direction.EAST;
-      return;  
+      return;
     }
     this.direction = Direction.WEST;
   }
