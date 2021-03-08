@@ -10,8 +10,8 @@ export interface Position {
 }
 
 export class Rover {
-  x: number = 0;
-  y: number = 0;
+  private x: number = 0;
+  private y: number = 0;
 
   direction = Direction.NORTH;
 

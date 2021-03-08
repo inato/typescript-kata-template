@@ -84,7 +84,7 @@ describe('Rover', () => {
     it('should not change the position', () => {
       rover.left();
 
-      expect(rover.position()).toStrictEqual({x: 0, y: 0});
+      expect(rover.position()).toStrictEqual(position(0, 0));
     });
 
     it('should face WEST after turning once', () => {
