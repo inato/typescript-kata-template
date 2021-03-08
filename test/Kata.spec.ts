@@ -1,7 +1,12 @@
-import { Direction } from "../src/Direction";
-import { Rover } from "../src/Rover";
+import { Direction } from '../src/Direction';
+import { Rover } from '../src/Rover';
 
 describe('Rover', () => {
+  let rover: Rover;
+
+  beforeEach(() => {
+    rover = new Rover();
+  });
   // it('should accept a sequence of commands', () => {
   //   let rover = new Rover();
 
@@ -18,86 +23,65 @@ describe('Rover', () => {
   // });
 
   it('should start at origin', () => {
-     const rover = new Rover();
-
-     expect(rover.x).toBe(0);
-     expect(rover.y).toBe(0);
+    expect(rover.x).toBe(0);
+    expect(rover.y).toBe(0);
   });
 
   it('should start facing North', () => {
-    const rover = new Rover();
-
     expect(rover.direction).toBe(Direction.NORTH);
- });
+  });
 
   describe('moving forward', () => {
-      
-   it('should move forward facing North', () => {
-      const rover = new Rover();
-
+    it('should move forward facing North', () => {
       rover.forward();
 
       expect(rover.x).toBe(0);
       expect(rover.y).toBe(1);
-   });
+    });
 
-   it('should not change direction when moving forward', () => {
-      const rover = new Rover();
-
+    it('should not change direction when moving forward', () => {
       rover.forward();
 
       expect(rover.direction).toBe(Direction.NORTH);
-   });
+    });
   });
 
   describe('left', () => {
-
     it('should not change the position', () => {
-      const rover = new Rover();
-    
       rover.left();
-    
+
       expect(rover.x).toBe(0);
       expect(rover.y).toBe(0);
     });
 
     it('should face WEST after turning once', () => {
-       const rover = new Rover();
-     
-       rover.left();
-     
-       expect(rover.direction).toBe(Direction.WEST);
-     });
+      rover.left();
 
-     it('should face SOUTH after turning twice', () => {
-      const rover = new Rover();
-    
+      expect(rover.direction).toBe(Direction.WEST);
+    });
+
+    it('should face SOUTH after turning twice', () => {
       rover.left();
       rover.left();
-    
+
       expect(rover.direction).toBe(Direction.SOUTH);
     });
 
     it('should face EAST after turning 3 times', () => {
-      const rover = new Rover();
-    
       rover.left();
       rover.left();
       rover.left();
-    
+
       expect(rover.direction).toBe(Direction.EAST);
     });
 
     it('should face NORTH after turning 4 times', () => {
-      const rover = new Rover();
-    
       rover.left();
       rover.left();
       rover.left();
       rover.left();
-    
+
       expect(rover.direction).toBe(Direction.NORTH);
     });
-   });
-     
+  });
 });
