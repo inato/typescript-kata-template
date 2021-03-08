@@ -1,10 +1,19 @@
 import { Direction } from './Direction';
 
+
+export interface Position {
+  x: number;
+  y: number;
+}
 export class Rover {
   x: number = 0;
   y: number = 0;
 
   direction = Direction.NORTH;
+
+  position():Position {
+    // return [x,y];
+  }
 
   forward() {
     switch (this.direction) {
