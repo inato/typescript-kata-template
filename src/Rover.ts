@@ -32,7 +32,7 @@ export class Rover {
         break;
       case Direction.NORTH:
         this.y += 1;
-        this._position.y += 1;
+        this._position = position(this._position.x, this._position.y+1);;
         break;
       case Direction.EAST:
         this.x += 1;
