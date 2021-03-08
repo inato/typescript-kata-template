@@ -1,5 +1,5 @@
 import { Direction } from './Direction';
-import { position, Position } from './position';
+import { north, position, Position } from './position';
 
 export class Rover {
   private _position = position(0, 0);
@@ -19,7 +19,7 @@ export class Rover {
         this._position = position(this._position.x, this._position.y - 1);
         break;
       case Direction.NORTH:
-        this._position = position(this._position.x, this._position.y + 1);
+        this._position = north(this._position);
         break;
       case Direction.EAST:
         this._position = position(this._position.x + 1, this._position.y);
