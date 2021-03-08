@@ -1,7 +1,7 @@
 import { Direction } from './Direction';
 
 export function position(x, y) {
-  return {x, y};
+  return { x, y };
 }
 
 export interface Position {
@@ -15,11 +15,8 @@ export class Rover {
 
   direction = Direction.NORTH;
 
-  position():Position {
-    return {
-      x: this.x,
-      y: this.y
-    }
+  position(): Position {
+    return position(this.x, this.y);
   }
 
   forward() {
