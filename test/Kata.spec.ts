@@ -67,12 +67,11 @@ describe('Rover', () => {
     })
 
     it('should move 2 units left when facing west and moving twice', () => {
-      rover.left();
       rover.forward();
       rover.forward();
 
-      expect(rover.x).toBe(-2);
-      expect(rover.y).toBe(0);
+      expect(rover.x).toBe(0);
+      expect(rover.y).toBe(2);
     } )
   });
 
