@@ -1,8 +1,8 @@
 export class Rover {
-  y(): Number {
+  y(): number {
     return 0;
   }
-  x(): Number {
+  x(): number {
     return 0;
   }
 }
