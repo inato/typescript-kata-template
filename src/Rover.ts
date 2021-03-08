@@ -16,9 +16,9 @@ export class Rover {
       return;  
     }
     if (this.direction === Direction.SOUTH) {
-        this.direction = Direction.EAST;
-        return;  
-      }
-      this.direction = Direction.WEST;
+      this.direction = Direction.EAST;
+      return;  
+    }
+    this.direction = Direction.WEST;
   }
 }
