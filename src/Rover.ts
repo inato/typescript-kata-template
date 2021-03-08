@@ -1,8 +1,6 @@
 import { Direction } from './Direction';
 import { north, west, position, Position } from './position';
 
-
-
 export class Rover {
   private _position = position(0, 0);
 
