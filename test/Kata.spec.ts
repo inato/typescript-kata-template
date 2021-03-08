@@ -30,6 +30,30 @@ describe('Rover', () => {
     expect(rover.direction).toBe(Direction.NORTH);
  });
 
+ describe('moving forward', () => {
+    
+
+  it('should move forward facing North', () => {
+    const rover = new Rover();
+
+    rover.forward();
+
+    expect(rover.x).toBe(0);
+    expect(rover.y).toBe(1);
+    expect(rover.direction).toBe(Direction.NORTH);
+ });
+
+  it('should move forward facing North', () => {
+    const rover = new Rover();
+
+    rover.forward();
+
+    expect(rover.x).toBe(0);
+    expect(rover.y).toBe(1);
+    expect(rover.direction).toBe(Direction.NORTH);
+ });
+});
+
   it('should move forward facing North', () => {
     const rover = new Rover();
 
