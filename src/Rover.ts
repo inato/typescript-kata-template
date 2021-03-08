@@ -11,20 +11,20 @@ export class Rover {
   }
 
   left() {
-      switch (this.direction) {
-          case Direction.WEST:
-              this.direction = Direction.SOUTH;
-              break;
-        case Direction.SOUTH:
-            this.direction = Direction.EAST;
-            break;
-        case Direction.NORTH:
-            this.direction = Direction.WEST;
-            break;
-                
-          default:
-            this.direction = Direction.WEST;
-              break;
-      }
+    switch (this.direction) {
+      case Direction.WEST:
+        this.direction = Direction.SOUTH;
+        break;
+      case Direction.SOUTH:
+        this.direction = Direction.EAST;
+        break;
+      case Direction.NORTH:
+        this.direction = Direction.WEST;
+        break;
+
+      default:
+        this.direction = Direction.WEST;
+        break;
+    }
   }
 }
