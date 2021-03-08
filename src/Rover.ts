@@ -11,14 +11,17 @@ export class Rover {
   }
 
   left() {
-    if (this.direction === Direction.WEST) {
-      this.direction = Direction.SOUTH;
-      return;
-    }
-    if (this.direction === Direction.SOUTH) {
-      this.direction = Direction.EAST;
-      return;
-    }
-    this.direction = Direction.WEST;
+      switch (this.direction) {
+          case Direction.WEST:
+              this.direction = Direction.SOUTH
+              break;
+        case Direction.SOUTH:
+            this.direction = Direction.EAST
+            break;
+        
+          default:
+            this.direction = Direction.WEST;
+              break;
+      }
   }
 }
